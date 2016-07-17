@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="AngularJS.js"></script>
+    <script type="text/javascript">
+
+
+    </script>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="myCtr">
+    <form>
+        <input type="text" 
+         name="numberDataName"
+         ng-required="true"
+         ng-pattern="/^\d{0,9}(\.\d{1,9})?$/"
+         <span ng-show="myform.numberDataName.$errorpattern.pattern"> 
+          Not valid number </span>
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Dr.Care a Medical Hospital category Flat bootstrap Responsive  Website Template | Home :: w3layouts</title>
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-1.11.0.min.js"></script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<!-- Custom Theme files -->
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--Google Fonts-->
+<link href='//fonts.googleapis.com/css?family=Cambo' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Hind:400,300,500,600,700' rel='stylesheet' type='text/css'>
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style_common.css" />
+<link rel="stylesheet" type="text/css" href="css/style4.css" />
+
+	<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+	</script>
+    
+<!-- //end-smoth-scrolling -->
+<script src="js/menuarray.js"></script>
+ <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="js/Arout.js"></script>
+     <script src="js/config.js"></script>
+
+<script type="text/javascript">
+       var app = angular.module('doctor',['ngRoute']);	   
+	    app.controller("Qdt", function ($scope) {
+        $scope.Menu = menuobj;
+				
+ $scope.select= function(item) {
+        $scope.selected = item; 
+ };
+
+ $scope.isActive = function(item) {
+        return $scope.selected === item;
+ };				
+	  });
+        
+ </script>
+
+</head>
+
+<body ng-app="doctor" ng-controller="Qdt">
+<!--header start here-->
+  <div ng-include="" src="'./Menu/Menu.html?'"></div>
+ <div ng-include="" src="'./View/Banner/banner.html?V1.0'"></div>
+<!--about strat here-->
+<div ng-include="" src="'./View/About/about.html?V1.0'"></div>
+<!--about end here-->
+<!--team start here-->
+<div ng-include="" src="'./View/Team/team.html?V1.0'"></div>
+<!--team end  here-->
+<!--services strta here-->
+<div ng-include="" src="'./View/Services/service.html?V1.0'"></div>
+<!--services end here-->
+<!--testimony start here-->
+<div ng-include="" src="'./View/Testmony/testmony.html?V1.0'"></div>
+<!--testmony end here-->
+<!--gallery start here-->
+<div ng-include="" src="'./View/Gallery/gallery.html?V1.0'"></div>
+<!--gallery end here-->
+<link rel="stylesheet" href="css/swipebox.css">
+	<script src="js/jquery.swipebox.min.js"></script> 
+	    <script type="text/javascript">
+			jQuery(function($) {
+				$(".swipebox").swipebox();
+			});
+</script>
+
+
+
+<!--contact start here-->
+<div ng-include="" src="'./View/Contact/contact.html?V1.0'"></div>
+<!--concact end here-->
+
+<!--map end here-->
+<!--footer strat here-->
+<div class="footer">
+	<div class="container">
+		<div class="footer-main">
+		   <div class="col-md-4 ftr-grid">
+		   	<h4>About Us</h4>
+		   	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.</p>
+		   </div>
+		   <div class="col-md-4 ftr-grid">
+		   	<h4>Address</h4>
+		   	<p>Company Office</p>
+		   	<p>Perspiciatis unde</p>
+		   	<p>Ph:+1285 587 624</p>
+		   </div>
+		   <div class="col-md-4 ftr-grid">
+		   	<h4>Newsletter</h4>
+		   	<input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
+		   	<input type="submit" value="Subscribe">
+		   </div>
+		  <div class="clearfix"> </div>
+	    </div>
+	</div>
+	<div class="copy-right">
+			<p>© 2015 Dr.Care. All rights reserved | Design by  <a href="http://w3layouts.com/" target="_blank">  W3layouts </a></p>
+		</div>
+		<script type="text/javascript">
+										$(document).ready(function() {
+											/*
+											var defaults = {
+									  			containerID: 'toTop', // fading element id
+												containerHoverID: 'toTopHover', // fading element hover id
+												scrollSpeed: 1200,
+												easingType: 'linear' 
+									 		};
+											*/
+											
+											$().UItoTop({ easingType: 'easeOutQuart' });
+											
+										});
+									</script>
+						<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+</div>
+
+
+</body>
+</html>

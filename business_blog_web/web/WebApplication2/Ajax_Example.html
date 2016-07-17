@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+        var loadMe = function ()
+        {
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readystate == 4 && xmlhttp.status == 200) {
+                    document.getElementById("copyright").innerHTML = xmlhttp.responseText;
+                }
+            };
+            xmlhttp.open("GET", "HtmlPage3.html", true);
+            xmlhttp.send();
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

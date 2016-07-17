@@ -1,0 +1,28 @@
+﻿<!-- index.html -->
+<!DOCTYPE html>
+<html ng-app="taskapp1">
+<head>
+    <script src="AngularJS.js"></script>
+    <script src="table.js"></script>
+</head>
+<body ng-controller="mainController">
+    Total:<span id="total">{{getTotal()}}</span>
+    <table id="table1" border="1">
+        <tr>
+            <td>ProductName</td>
+            <td><span id="UnitPrice">UnitPrice</span></td>
+            <td>Quantity</td>
+            <td>TotalPrice</td>
+        </tr>
+          <tr  ng-repeat="s in ProductOrderList">
+            <td>{{s.ProductName}}</td>
+            <td><span id="UnitPrice_1">{{s.floatUnitPrice}}</span></td>
+            <td><input type="text" id="quantity_1"  ng-model="s.quantity"  /></td>
+            <td> {{s.quantity*s.floatUnitPrice}}</td>
+        </tr>
+        
+    </table>
+
+</body>
+</html>
+

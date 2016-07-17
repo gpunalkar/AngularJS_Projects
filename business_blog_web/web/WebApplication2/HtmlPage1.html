@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="AngularJS.js"></script>
+    <script type="text/javascript">   
+        var myApp=angular.module("myApp",[]);
+        myApp.controller("myCtr", function ($scope)
+        {
+            $scope.listofstudents = [
+                {
+                    Name: "Sonam",
+                    Age: 5,
+                    Class: 2
+                },
+                {
+                    Name: "Ganesh",
+                    Age: 6,
+                    Class: 3
+                },
+               {
+                   Name: "Tushar",
+                   Age: 3,
+                   Class: 1
+               },
+            ]
+        });
+
+    </script>    
+</head>
+<body ng-app="myApp">
+    <div ng-controller="myCtr">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>class</th>
+            </tr>
+            <tr ng-repeat="stu in listofstudents">
+                <td>{{stu.Name}}</td>
+                <td>{{stu.Age}}</td>
+                <td>{{stu.Class}}</td>
+            </tr>
+
+        </table>
+
+    </div>
+    <div ng-include src="'/HtmlPage3.html'">
+
+    </div>
+</body>
+</html>

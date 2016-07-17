@@ -1,0 +1,553 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="Multieyes">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Multieyes </title>
+	
+	<!-- core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <!--<link rel="shortcut icon" href="images/ico/favicon.ico">-->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/AngularJS.js"></script>
+    <script src="js/Arout.js"></script>
+   
+
+    
+    <script src="src/skdslider.min.js"></script>
+   <link href="src/skdslider.css" rel="stylesheet">
+    
+    <script type="text/javascript">
+        var menuobj = [
+            {
+                id: 1,
+                pageName: "Home",
+                pageLevel: 0,
+                parentPage: null,
+                pageOrder: 1,
+                pageLink: "#",
+                pageActive: true,
+
+            },
+            {
+                id: 2,
+                pageName: "Services",
+                pageLevel: 0,
+                parentPage: null,
+                pageOrder: 2,
+                pageLink: "#",
+                pageActive: false,
+            },
+        {
+            id: 3,
+            pageName: "Car Range",
+        pageLevel: 0,
+        parentPage: null,
+        pageOrder: 3,
+        pageLink: "#",
+        pageActive: false,
+
+        },
+        {
+            id: 4,
+            pageName: "Advertise",
+            pageLevel: 0,
+            parentPage: null,
+            pageOrder: 4,
+            pageLink: "#",
+            pageActive: false,
+        },
+        {
+            id: 5,
+            pageName: "FAQ",
+            pageLevel: 0,
+            parentPage: null,
+            pageOrder: 5,
+            pageLink: "#",
+            pageActive: false,
+
+        },
+        {
+            id: 6,
+            pageName: "Reach Us",
+            pageLevel: 0,
+            parentPage: null,
+            pageOrder: 6,
+            pageLink: "#",
+            pageActive: false,
+
+        },
+
+
+        ]
+        
+    </script>
+    <script type="text/javascript">
+        var app = angular.module('Multieyes', ['ngRoute']);
+
+
+        app.directive('slider', function () {
+            return {
+                replace: true,
+                restrict: 'E',  
+                templateUrl: "View/Slidebar/Sliderbar.html"
+            };
+        });
+
+        app.controller("Multieyescontroller", function ($scope) {
+
+
+            $scope.select = function (Obj) {
+      
+                $scope.isActive.pageActive = false;
+                Obj.pageActive = true;
+                $scope.isActive = Obj;
+            }
+
+            $scope.Menu = menuobj;
+    
+            $scope.isActive = menuobj[0];
+
+
+
+        });
+    </script>
+</head><!--/head-->
+
+<body class="homepage" ng-controller="Multieyescontroller">
+   
+    <div ng-include="" src="'View/Menu/Menu.Html'"  ></div>
+
+    <slider></slider>
+     
+    <!--/#main-slider-->
+
+    <section id="feature" >
+        <div class="container">
+           <div class="center wow fadeInDown">
+                <h2>Welcome To World Of Multieyes</h2>
+                <p class="lead">New concept of <span style="text-transform:uppercase; color:#F48A05;">advertisement</span> is coming in the market trough strategy of branding on your family cars.</p>
+            </div>
+
+            <div class="row">
+                <div class="features">
+                    <div class="col-sm-8 col-md-8 col-lg-8 wow fadeInDown">
+                       <p class="intro_text">New concept of advertisement is coming in the market trough strategy of branding on your family cars.
+Multieyes.com has emerged to help to TAKE A NEW BRAND CAR ONLY ON LESS THAN HALF AMOUNT OF THE ORIGINAL CAR. The Multieys provides the cars to customer only on 25% down payment; remaining EMI or instalments will be deposit by company. 
+<p class="intro_text">Anybody can buy or purchase a new brand car on unexpected cost
+We are a medium, designed to build a balance between advertisers and the public: and auto manufacturers and consumers. We are also giving you the opportunity to help start a revolution to transform the way of advertising mantras by advertising on Cars. </p>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 wow fadeInDown">
+                       <img src="images/key.jpg" class="img-responsive">
+                    </div>
+
+                    
+                </div><!--intro feature closed-->
+            </div><!--/.row-->    
+        </div><!--/.container-->
+    </section><!--/#feature-->
+
+<section id="services" class="service-item">
+	   <div class="container">
+            <div class="center wow fadeInDown">
+                <h2>Our Service</h2>
+                <p class="lead">We provide advertisement service for you with  your new own car </p>
+            </div>
+
+            <div class="row">
+            
+            <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="media services-wrap wow fadeInDown">
+                        <div class="pull-left block_disp">
+                            <img class="img-responsive" src="images/services/services2.png">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading">Put Your advertisement on car </h3>
+                            <p>Advertisement on cars is cost effective, highly visble, flexible  compare with other advertising media. for advertisment on car please contact us  </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="media services-wrap wow fadeInDown">
+                        <div class="pull-left block_disp">
+                            <img class="img-responsive" src="images/services/services1.png">
+                        </div>
+                        <div class="media-body">
+                            <h3 class="media-heading">Get your New cars</h3>
+                            <p>Dream of owning a brand new car just for a small down payment of <span style="font-size:34px;">25%</span> Not a dream anymore!! Yes it is true!! We shall pay all your EMIs!! </p>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                  
+
+                
+
+                                                                
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section>
+
+
+    <section id="recent-works">
+        <div class="container">
+            <div class="center wow fadeInDown">
+                <h2>List of Car</h2>
+                <p class="lead">Just Pay <span style="font-size:36px; color:#F48A05;">25%</span> Down Payment Of your car's value, And own a brand New Car We will take care of your EMI's </p>
+                <p class="lead">Yes it's not a dream Yes It's True!!! Car Yours!! EMI's Ours!!  </p>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="images/portfolio/recent/item1.jpg" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a href="#">Maruti Suzuki Ritz</a> </h3>
+                                <p>Vxi BS-IV</p>
+                                <a class="preview" href="images/portfolio/full/item1.jpg" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>   
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="images/portfolio/recent/item2.png" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a href="#">Ford Classic</a></h3>
+                                <p>1.6 Duratec LXi</p>
+                                <a class="preview" href="images/portfolio/full/item2.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div> 
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="images/portfolio/recent/item3.png" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a href="#">Ford Figo </a></h3>
+                                <p>Duratorq Diesel EXI 1.4</p>
+                                <a class="preview" href="images/portfolio/full/item3.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>   
+
+                <div class="col-xs-12 col-sm-4 col-md-3">
+                    <div class="recent-work-wrap">
+                        <img class="img-responsive" src="images/portfolio/recent/item4.png" alt="">
+                        <div class="overlay">
+                            <div class="recent-work-inner">
+                                <h3><a href="#">Hyundai i10 </a></h3>
+                                <p>1.1L iRDE ERA Special Edition</p>
+                                <a class="preview" href="images/portfolio/full/item4.png" rel="prettyPhoto"><i class="fa fa-eye"></i> View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>   
+                
+                 <div class="col-xs-12 col-sm-4 col-md-3">
+                   <a href="gallery.html">View more </a>
+                 </div>  
+
+                
+
+                   
+
+                   
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#recent-works-->
+
+    <!--/#services-->
+
+<section id="partner">
+        <div class="container">
+            <div class="center wow fadeInDown">
+               
+               
+            </div>    
+
+                   
+        </div><!--/.container-->
+    </section>
+
+    <section id="middle">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 wow fadeInDown">
+                    <div class="skill">
+                        <h2>Advertise with us</h2>
+                        <p>We will make your adverts reach inside housing societies, office complexes, frequently visited markets, schools, hospitals and other places frequented by common public. Your advert shall be viewed by the consumers constantly everyday, throughout the day and brand recall value is increased beyond imagination so far in the advertising segment.</p>
+
+                        
+                        <form>
+                           <div class="row">
+                              <div class="col-sm-12 col-md-12 col-lg-12">
+                                 <div class="form-group">
+                                      <label>Name<span class="error">*</span></label>
+                                      <input type="text" value="" placeholder="Enter name" class="form-control" name="f_nm" id="f_name">
+                                 </div>
+                                 <div class="form-group">
+                                      <label>Company Name<span class="error">*</span></label>
+                                      <input type="text" value="" placeholder="Enter company name" class="form-control" name="com_nm" id="com_name">
+                                 </div>
+                                 <div class="form-group">
+                                      <label>Email Id<span class="error">*</span></label>
+                                      <input type="text" value="" placeholder="Enter email id" class="form-control" name="email" id="e-mail">
+                                 </div>
+                                  <div class="form-group">
+                                      <label>Your message </label>
+                                      <textarea type="text" value="" placeholder="Enter message" class="form-control" name="msg" id="message"></textarea>
+                                 </div>
+                                 <button class="btn btn-primary">Send</button>
+                              
+                              </div>
+                            
+                           
+                           </div>
+                         
+                        
+                        
+                        </form>
+                        
+
+                        
+
+                        
+                    </div> <!--skill closed -->
+
+                </div><!--/.col-sm-6-->
+
+                <div class="col-sm-6 wow fadeInDown">
+                    <div class="accordion">
+                        <h2>Advantage on the car with us</h2>
+                        <div class="panel-group" id="accordion1">
+                          <div class="panel panel-default">
+                            <div class="panel-heading active">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1">
+                                  Low cost budget advertisement
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+
+                            <div id="collapseOne1" class="panel-collapse collapse in">
+                              <div class="panel-body">
+                                  <div class="media accordion-inner">
+                                        <div class="pull-left">
+                                            <img class="img-responsive" src="images/accordion1.png">
+                                        </div>
+                                        <div class="media-body">
+                                             <h4>Advertise on car</h4>
+                                             <p>You can post your add on car with your compatible budget</p>
+                                        </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo1">
+                                  What is missing in your Outdoor Campaign?
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+                            <div id="collapseTwo1" class="panel-collapse collapse">
+                              <div class="panel-body">
+                               The outdoor advert campaigns till now have been lacking the brand recall value; which the advertiser wants to achieve as against to any other medium of advertisements.
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree1">
+                                  Why?
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+                            <div id="collapseThree1" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                The outdoor campaigns till date i.e road-hoardings, bus shelter hoardings, train station hoarding etc or even adverts on taxi-cabs do not have the essence of being in the view of the consumer constantly and hence the brand recall value is minimal.
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour1">
+                                  Our Answer to this Problem !
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+                            <div id="collapseFour1" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                We will make your adverts reach inside housing societies, office complexes, frequently visited markets, schools, hospitals and other places frequented by common public. Your advert shall be viewed by the consumers constantly everyday, throughout the day and brand recall value is increased beyond imagination so far in the advertising segment.
+                              </div>
+                            </div>
+                          </div>
+                          
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour1">
+                                 How shall we do It. 
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+                            <div id="collapseFour1" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                We have an empanelled fleet of enormous range of private and corporate vehicles in across the country. We will use these car's doors and fenders (all 4 of them) for advertisements of your brand/products. These ads and promotions are placed as vinyl stickers on the doors & fenders of the car. These private consumer vehicles go to office complexes everyday in the morning/day, then to residential/housing societies in the evening everyday and then to schools or markets on weekends. Wherever the car goes your brand goes! When viewed by the consumers everyday, day after day the brand recall value is increased unimaginably.
+                              </div>
+                            </div>
+                          </div>
+                          
+                          
+                        </div><!--/#accordion1-->
+                    </div>
+                </div>
+
+            </div><!--/.row-->
+        </div><!--/.container-->
+    </section><!--/#middle-->
+
+    
+
+    <!--/#partner-->
+
+    <section id="conatcat-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4 col-md-4 col-lg-4 center_block">
+                  <div align="center"><img src="images/logo.png" class="img-responsive"></div>
+                </div>
+                
+                <div class="col-sm-8 col-md-8 col-lg-8">
+                    <div class="media contact-info wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                        <div class="pull-left">
+                            <i class="fa fa-phone"></i>
+                        </div>
+                        <div class="media-body">
+                            <h2>Have a question or need information?</h2>
+                            <p>If you have any query or question about Multieyes then call us On :</p>
+                            <p> <strong>Contact </strong> +91- 86000300744 /<strong> Contact </strong> +91- 8600010010 </p>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div><!--/.container-->    
+    </section><!--/#conatcat-info-->
+
+    <section id="bottom">
+        <div class="container wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+            <div class="row">
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Multieyes</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Copyright</a></li>
+                            <li><a href="#">List of cars</a></li>
+                            <li><a href="#">Privacy policy</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>About Us</h3>
+                        <p>TAKE A NEW BRAND CAR ONLY ON LESS THAN HALF AMOUNT OF THE ORIGINAL CAR The Themsservices company provides the cars to customer only on 25% down payment; remaining EMI or instalments will be deposit by company. Anybody can buy or purchase a new brand car on unexpected cost </p>
+                    </div>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Join with us</h3>
+                        <ul class="social_list">
+                            <li  ><a href="#" class="fb" ></a></li>
+                             <li  ><a href="#" class="twr" ></a></li>
+                             <li  ><a href="#" class="lkin" ></a></li>
+                            <div class="clearfix"></div>
+                        </ul>
+                    </div>    
+                </div><!--/.col-md-3-->
+
+                <div class="col-md-3 col-sm-6">
+                    <div class="widget">
+                        <h3>Our Corporate Office</h3>
+                        
+                        <p><strong>Address : </strong>Shop No. 1A, Classic Appt. Near Shivaji Nagar, Near Asia Glass, Nashik – Puna Road, Nashik – 422006</p>
+                        <p><strong>Email</strong> : enquiry@multieyes.in</p>
+                        <p><strong>Tel No.:</strong> 0253-2410010 </p>
+                    </div>    
+                </div><!--/.col-md-3-->
+            </div>
+        </div>
+    </section><!--/#bottom-->
+
+    <footer id="footer" class="midnight-blue">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    &copy; 2015 <a target="_blank" href="#" title="">Multieyes</a>. All Rights Reserved.
+                </div>
+                <div class="col-sm-6">
+                    <img src="images/logo.png" class="img-responsive pull-right" width="50">
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+
+    <!--<script src="js/jquery.js"></script>-->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <script type="text/javascript">
+		jQuery(document).ready(function(){
+
+			jQuery('#demo3').skdslider({'delay':5000, 'animationSpeed': 2000,'showNextPrev':true,'showPlayButton':false,'autoSlide':true,'animationType':'fading'});
+
+
+
+		});
+    </script>
+</body>
+</html>

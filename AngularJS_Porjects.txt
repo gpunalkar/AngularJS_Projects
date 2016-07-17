@@ -1,0 +1,16 @@
+ng-hide 
+ng-show
+ng-if
+
+eval() evaluate the expression
+
+<ng-if="=="> evaluate true/fasle
+
+ternary condition
+<input ng-class="1==1? "class1" : "class2" />
+
+ng-class 
+class=""
+expression evaluate
+
+filter is same as where condition.  

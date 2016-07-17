@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="AngularJS.js"></script>
+    <script src="angular-route.min.js"></script>
+
+    <script type="text/javascript">
+
+        var MyControllerDefault=function()
+        {
+            $scope.Name="QuickITDotNet"
+        }
+
+        var MyControllerA1 = function ($scope) {
+            $scope.Name = "QuickITDotNet"
+            $scope.Address = "Viman Nagar"
+            $scope.Age = "21" 
+       }
+
+        var myApp = angular.module("myApp", ['ngRoute'])
+        myApp.controller("MyControllerDefault", MyControllerDefault);
+        myApp.controller("MyControllerA1", MyControllerA1);
+              myApp.config(function ($routeProvider) {
+            $routeProvider.
+              when('/', {
+                  templateUrl: 'Html_ViewPage.html',
+                  controller: 'MyControllerDefault'
+              }).
+              when('/A1', {
+                  templateUrl: 'Html_Default.html',
+                  controller: 'MyControllerA1'
+              }).
+              otherwise({
+                  redirectTo: '/'
+              });
+        });
+
+
+       
+
+
+    </script>
+
+
+</head>
+<body  ng-app="myApp">
+    
+    <div ng-view>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿<html >
+<head>
+    <meta charset="utf-8">
+    <title>Angular.js Example 2</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+    <script type="text/javascript">
+        if (typeof angular == 'undefined') {
+
+            document.write('<script src="AngularJS.js"><\/script>')
+        }
+    </script>
+
+
+</head>
+<body >
+
+    <div ng-app>
+        Name:<input ng-model="name" type="text" />
+        <br />
+        Name:<input ng-model="name" type="text" />
+        <br />
+
+        Hello
+        <div style="color:aquamarine" ng-bind="name"></div>
+
+        <br />
+        Hello, {{name}}
+
+        <div> One way binding :--> {{name}} </div>
+
+        <ul>
+            <li>liiiii</li>
+            <li ng-bind="name"></li>
+        </ul>
+
+
+        <div ng-include src="'/example02/Copyrights.html'"></div>
+    </div>
+    <br />
+    Hi
+    <div ng-bind="name">XYZ </div>
+  
+
+    
+</body>
+</html>
