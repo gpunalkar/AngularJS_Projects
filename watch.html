@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>Watch Example 1</title>
+	<script src="js/AngularJS.js"></script>
+	<script src="js/angular-route.min.js"></script>
+    <script type="text/javascript">
+        var myApp = angular.module("myApp", []);
+        myApp.controller('myCtr', function ($scope) {
+            $scope.name="a";
+            $scope.age="1";
+            $scope.user = { name:"a"};
+             
+
+            $scope.$watchGroup(['name', 'age', 'user'],
+                function (newValue, oldValue) {
+                    for (var a in newValue) {
+                        
+
+                        if( newValue[a].toString()  =="[Object Object]" )
+                        {
+
+                            for (var k in newValue[a]) {
+                                console.log(newValue[a][k] + oldValue[a][k])
+                            }
+
+
+                        }
+                        else {
+                            console.log("Value :" + newValue[a] + " -N:O " + oldValue[a]);
+                        }
+                    }
+                }, true
+            )
+        });
+	</script>
+</head>
+<body ng-app="myApp">
+	<div ng-controller="myCtr">
+        <table>
+        <tr><td>Name:</td><td> <input type="text" ng-model="name" /></td></tr>
+		<tr><td>Age:</td><td> <input type="text" ng-model="age" /></td></tr>
+            <tr><td>User:</td><td> <input type="text" ng-model="user.name" /></td></tr>
+            </table>
+        </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Angular.js Example</title>
+    <!--<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+</head>
+<body>
+    <form name="myform" ng-app>
+        Number:
+        <input type="Text" name="numberDataName" id="numberDataID" ng-model="numberData" require ng-pattern="/^\d{0,9}(\.\d{1,9})?$/">
+        <span ng-show="myform.numberDataName.$error.pattern">Not valid number!</span><br>
+        Number key-in is <span ng-bind="numberData"></span>.<br>
+        InValid Number:
+        <input type="Text" name="numberIDataName" id="numberIDataID" ng-model="numberIData" require ng-pattern="/^\d{0,9}(\.\d{1,9})?$/">
+        <span ng-show="myform.numberIDataName.$error.pattern">Not valid number!</span><br>
+        Number key-in is <span ng-bind="numberIData"></span>.<br>
+        Min and Max Number:
+        <input type="Text" name="numbermDataName" id="numbermDataID" ng-model="numbermData" ng-required="true" ng-minlength="2" ng-maxlength="5">
+        <span ng-show="myform.numbermDataName.$error.required">It is require.</span> <span ng-show="myform.numbermDataName.$error.minlength || myform.numbermDataName.$error.maxlength">Please add string with length of 2-5!</span><br>
+        Min and Max key-in is <span ng-bind="numbermData"></span>.<br>
+        Trim String:
+        <input type="Text" name="stringDataName" id="stringDataID" ng-model="stringData" require ng-trim="true">
+        <br>
+        String key-in is <span ng-bind="stringData"></span>.<br>
+        Not Trim String:
+        <input type="Text" name="stringntDataName" id="stringntDataID" ng-model="stringntData" require ng-trim="false">
+        <br>
+        String key-in is <span ng-bind="stringntData"></span>.<br>
+    </form>
+</body>
+</html>
