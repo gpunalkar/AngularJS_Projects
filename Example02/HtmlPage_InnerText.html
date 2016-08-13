@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html >
+<head >
+    <title></title>
+	<meta charset="utf-8" />
+
+    <script src="AngularJS.js"></script>
+
+    <script type="text/javascript">
+
+        var ClickMe = function()
+        {
+
+            var obj1 = document.getElementById("Id2");
+            // eval(obj.value);
+
+            var obj = {
+
+            };
+
+            obj.a1 = 12;
+            obj.a2 = 13;
+            alert(obj[obj1.value])
+
+
+        }
+        
+    </script>
+</head>
+<body >
+
+    <input type="button" value="CallMe" onclick="ClickMe()" />
+    <div ng-app  ng-init="name='Sujit'">
+        <div id="Id1"></div>
+        <input type="text" id="Id2" ng-model="name" />
+
+        <div ng-bind="name">Hi</div>
+        <br />
+        <div>Hi , {{name}}</div>
+
+        <div>
+            {{::name }}
+        </div>
+
+</body>
+</html>

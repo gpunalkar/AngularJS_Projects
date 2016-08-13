@@ -19,16 +19,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <script src="js/angular-route.min.js"></script>
     <script type="text/javascript">
         var myApp = angular.module("myApp", ['ngRoute']);
-        
-        myApp.directive('blogMenu', function()
-        {
-            return {
-                replace: true,
-                restrict: 'EAC',
-                scope: true,
-            templateUrl: 'Header.html'
-        };
-        });
 
         myApp.controller("myCtr", function ($scope) {
             $scope.Menu = Menu;           
@@ -37,8 +27,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 <body ng-app="myApp">
   <div ng-controller="myCtr">
-      <!-- div ng-include src="'/Header.html'"></!-->
-      <p class="blog-menu"></p>
+      <div ng-include src="'/Header.html'"></div>
       <div ng-include src="'/Footer.html'"></div>
   </div>
 </body>

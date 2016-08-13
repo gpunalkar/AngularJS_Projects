@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html >
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="AngularJS.js"></script>
+
+    <script type="text/javascript">
+
+      var objApp=  angular.module("MyApp",[])
+     var ClickMe =function () {
+
+          alert($scope["Name"]);
+      }
+
+
+      var myCntroller =function ($scope) {
+
+          $scope.ClickMe = ClickMe;
+      }
+      objApp.controller("myCtr", myCntroller);
+
+
+        //
+      objApp.controller("myCtr1", function ($scope) {
+
+          $scope["$$childTail"].Name = $scope.Name;
+          $scope.ClickMe = function () {
+
+              
+          }
+
+      })
+
+
+      objApp.controller("myCtrChild", function ($scope) {
+
+          $scope.ClickMe = function () {
+
+              alert($scope["Name"]);
+          }
+
+      })
+    </script>
+
+</head>
+<body ng-App="MyApp">
+
+    <div ng-controller="myCtr">
+
+        <input type="text" ng-model="Name" />
+        <div ng-bind="Name"></div>
+
+        <input type="button" value="ClickMe" ng-click="ClickMe()" />
+
+    </div>
+
+
+    <div ng-controller="myCtr1">
+
+        <input type="text" ng-model="Name" />
+        <div ng-bind="Name"></div>
+
+        <input type="button" value="ClickMe" ng-click="ClickMe()" />
+
+
+        <div ng-controller="myCtrChild">
+
+            <input type="text" ng-model="Name" />
+            <div ng-bind="Name"></div>
+
+            <input type="button" value="ClickMe" ng-click="ClickMe()" />
+
+        </div>
+
+
+    </div>
+
+
+    
+
+</body>
+</html>

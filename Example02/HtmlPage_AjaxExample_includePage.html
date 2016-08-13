@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script type="text/javascript">
+        var a=12;
+        var LoadMe=function()
+        {
+            alert(window.a)
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function () {
+                if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                    document.getElementById("copyright").innerHTML
+                        = xmlhttp.responseText;
+                }
+            };
+            xmlhttp.open("GET", "/example02/Copyrights.html", true);
+            xmlhttp.send();
+        }
+    </script>
+
+</head>
+<body onload="LoadMe()" >
+    <div id="copyright"></div>
+</body>
+</html>

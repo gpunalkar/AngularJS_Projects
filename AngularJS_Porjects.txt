@@ -14,3 +14,142 @@ class=""
 expression evaluate
 
 filter is same as where condition.  
+
+Directive
+
+E Element
+A Attribute
+C Class
+M Comment
+
+replace: true
+
+
+$watch
+$watchgroup
+$watchconnection
+
+
+watch >> property
+
+a.p.('name', [])
+angular
+module
+name > key
+[] > vaue
+
+id = keep the refrence in window. if use more id it will hampper the perfomace
+
+id name age
+id name 
+
+How to compare the long object or objects insid eobject
+
+convert that object in json - json is nothing but stirng objector.
+
+Constructor intrally create a object
+
+injector is properly 
+
+How to event triger onther event.
+
+$qeue
+
+= true
+
+Any project the requird diffrent library. Angular JS is use $apply is us e call the other library.
+
+Validations: Validations is required only for form (when you required to the work eith server). Id is not use in angualar
+
+$error - holder fr all error. $error >> true >> error
+
+ng-required
+ng-pattern
+ng-maxlength
+
+angular js inject the ng-invlalide / ng-valid class is addded by angular.
+ng-minlength
+
+
+
+javascript is everything is list.
+
+add
+update
+delete
+
+readonly - frreze. only need to set
+
+property vs field
+property is have getter setter.
+
+JavaScript is also have specail property freeze.
+
+ng-model options
+
+
+function get set ecma 5 is implemented
+getter 
+setter
+
+JavaScript is everthing is controller. 
+
+ng-trim"true" 
+
+ISO-FORMAT- 12 Decemeber 1969 >> 0 >> 1 Jan 1970 0
+each milisecond equal to 1 Green zone timing
+
+
+ng-value
+
+ng-value="
+
+
+ng-ind -- 
+
+
+ther are teo type controllor
+form - ng-model
+display - ng-bind / {{}}
+
+$apply - create the dom with scope
+
+multiple module - 
+
+What is angular bootstrap
+angular.bootstrap
+
+$scope.element(document.getElementById("myapp1"), ['myapp']);
+
+third party library need to include & register for angular js. 
+
+$scope - scope is internal object of angular & it called the dependency injection. 
+function name is parameter
+
+angular bootstrap - helps to include multiple apps in single page.
+
+ng-route - update panel in .net
+HTML >> $http >> replace
+URL >> Home URL/home
+
+Localization - messages.
+# tag means the not go to server side the request.
+# tag always remind the previous site
+
+#change - not go to server
+Change # - go to server
+
+
+routing >> 
+
+routeProvider
+routeParams - capture the information for parameter
+
+:x - x denotes as any value(id)
+
+template
+templateURL
+
+
+
+wh

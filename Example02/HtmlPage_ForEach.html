@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+
+    <script type="text/javascript">
+        var EvalMe= function()
+        {
+
+            var txt = document.getElementById("txtevl");
+
+            var Arr=["Ganesh","Suvarna","Sonam","tushar"]
+            Arr.push("Smita");
+
+            var obj = {
+                Name: "Smita",
+                Address: "QuickIT-F26",
+                business:"Traing"
+
+            }
+            var table="<Table>"
+            for (var key in obj) {
+                 
+                table = table + "<tr><Td>" +obj[ key] + " </TD></tr>"
+
+            }
+            table = table + "</Table>";
+
+            var divID = document.getElementById("divID");
+
+            divID.innerHTML = table;
+         /*   for(var i=0;i< Arr.length;i++)
+            {
+                if (i == 0)
+                {
+                    txt.value =   Arr[i];
+                }
+                else {
+                    txt.value = txt.value + " , " + Arr[i];
+                }
+                
+            }*/
+
+        /*   for (var key in Arr) {
+                
+                    txt.value = txt.value + " , " + Arr[ key ];
+                 
+            } 
+            */
+
+        /*    for (let val of Arr) {
+
+                console.log(val)
+                txt.value = txt.value + " , " +  val ;
+
+            }*/
+
+          
+            
+
+            
+        }
+    </script>
+</head>
+<body>
+
+
+    <input type="text" id="txtevl" />
+    <input type="button" value="Click" onclick="EvalMe()" />
+    <div id="divID"></div>
+</body>
+</html>

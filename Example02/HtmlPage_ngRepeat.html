@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="AngularJS.js"></script>
+    <script type="text/javascript" >
+
+        var $3= 1;
+        var myApp = angular.module("myApp", []);
+
+        myApp.controller("myCtr", function($scope)
+        {
+
+
+            $scope.ListOfStudents = [
+                {
+                    Name: "Suvarna",
+                    Age: 7,
+                    class:8
+                },
+
+                {
+                    Name: "Ganesh",
+                    Age: 7,
+                    class: 8
+                },
+                {
+                    Name: "Tushar",
+                    Age: 7,
+                    class: 8
+                },
+                {
+                    Name: "Sonam",
+                    Age: 7,
+                    class: 8
+                }
+
+            ]
+
+
+        })
+
+        alert(1)
+    </script>
+  
+
+
+    <script type="text/javascript">
+
+        var onLoad=function()
+        {
+            alert(1)
+        }
+    </script>
+
+
+
+</head>
+<body onclick="onLoad()" ng-app="myApp">
+    <div ng-controller="myCtr">
+ 
+        <input type="text" ng-model="name" />
+
+    </div>
+
+</body>
+</html>

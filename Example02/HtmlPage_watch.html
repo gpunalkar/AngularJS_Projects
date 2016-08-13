@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="AngularJS.js"></script>
+    <script type="text/javascript">
+
+        var myApp = angular.module("myApp", []);
+
+        myApp.controller("myCtr", function($scope)
+        {
+            $scope.name = "A";
+
+            $scope.age = 11;
+
+            $scope.user = {
+               name: "A"
+            };
+
+            $scope.users = [
+                {
+                    name: "A"
+                },
+                {
+                    name: "B"
+                }
+
+            ]
+
+            $scope.$watch('name',
+               function (newValue, oldvalue) {
+                   console.log("Value  :" + newValue + " - N:O -" + oldvalue)
+                  // console.log("Value  :" + newValue[1] + " - N:O -" + oldvalue[1])
+               }, false
+           )
+
+            /* $scope.$watchGroup(['name','age'],
+                function (newValue, oldvalue)
+            {
+                    console.log("Value  :" + newValue[0] + " - N:O -" + oldvalue[0])
+                    console.log("Value  :" + newValue[1] + " - N:O -" + oldvalue[1])
+            }, false
+            ) */
+ 
+          /*  $scope.$watch('user', function (newValue, oldvalue) {
+                console.log("Object  :" + newValue.name
+                + "N:O" + oldvalue.name)
+            }, false
+            )*/
+
+
+    $scope.$watchCollection('users', function (newValue, oldvalue) {
+        console.log("Object  :" + newValue.name
+                 + "N:O" + oldvalue.name)
+             }, false
+             )
+
+           
+
+           
+
+
+
+        })
+ 
+    </script>
+
+
+
+    
+
+
+</head>
+<body  ng-app="myApp">
+    <div ng-controller="myCtr">
+
+        <input type="text" ng-model="name" />
+
+        <input type="text" ng-model="age" />
+        <input type="text" ng-model="user.name" />
+
+    </div>
+
+</body>
+</html>
