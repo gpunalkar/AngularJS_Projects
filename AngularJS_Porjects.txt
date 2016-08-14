@@ -150,6 +150,6 @@ routeParams - capture the information for parameter
 template
 templateURL
 
+Serach Engine Optimization
 
-
-wh
+Resolve >> on Load >>  
